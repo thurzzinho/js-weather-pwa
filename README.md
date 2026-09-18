@@ -46,4 +46,4 @@ Siga os passos abaixo para rodar o projeto na sua máquina.
 
 1. **Clone este repositório:**
    ```bash
-   git clone [https://github.com/thurzzinho/js-weather-pwa.git](https://github.com/thurzzinho/js-weather-pwa.git)
+   git clone [https://github.com/thurzzinho/js-weather-pwa.git]
