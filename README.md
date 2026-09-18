@@ -7,7 +7,7 @@
 
 Um Progressive Web App (PWA) simples, rápido e responsivo para consultar a previsão do tempo em tempo real. O projeto consome uma API externa de clima e utiliza recursos nativos do dispositivo, como GPS, para fornecer dados meteorológicos precisos com base na localização atual do usuário.
 
-## Funcionalidades
+## 📌 Funcionalidades
 
 * **Instalável (PWA):** Pode ser adicionado à tela inicial de smartphones ou desktops, funcionando com uma interface de aplicativo nativo.
 * **Geolocalização (GPS):** Utiliza o hardware do dispositivo para identificar as coordenadas do usuário e exibir o clima local instantaneamente.
@@ -18,11 +18,11 @@ Um Progressive Web App (PWA) simples, rápido e responsivo para consultar a prev
 * Interface responsiva que se adapta perfeitamente a dispositivos móveis e desktops.
 * Tratamento de erros amigável, notificando caso a cidade não seja encontrada ou a localização seja negada.
 
-## Link do projeto
+## 💻 Link do projeto
 
 > [Clima Agora PWA](https://thurzzinho.github.io/js-weather-pwa/)
 
-## Tecnologias Utilizadas
+## 🚀 Tecnologias Utilizadas
 
 Este projeto foi construído utilizando as seguintes tecnologias:
 
@@ -33,17 +33,44 @@ Este projeto foi construído utilizando as seguintes tecnologias:
 * **Fetch API:** Para realizar as requisições HTTP de forma moderna e assíncrona.
 * **[OpenWeatherMap API](https://openweathermap.org/)**: Como fonte de dados em tempo real.
 
-## Como executar o projeto localmente
+## 🛠️ Como executar o projeto localmente
 
 Siga os passos abaixo para rodar o projeto na sua máquina.
 
 ### Pré-requisitos
-* Um navegador web moderno (Chrome, Edge, Safari, etc).
-* Um editor de código (recomendamos o [VS Code](https://code.visualstudio.com/)).
-* Uma chave de API gratuita (API Key) do OpenWeatherMap.
+- Um navegador web moderno (Chrome, Firefox, Edge, Safari, etc).
+- Um editor de código (recomendamos o [VS Code](https://code.visualstudio.com/)).
+- Uma chave de API gratuita (API Key) do OpenWeatherMap.
 
 ### Passo a Passo
 
 1. **Clone este repositório:**
    ```bash
-   git clone [https://github.com/thurzzinho/js-weather-pwa.git](https://github.com/thurzzinho/js-weather-pwa.git)
+   (https://github.com/thurzzinho/js-weather-pwa.git)
+   ```
+
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd js-weather-pwa
+   ```
+   
+3. **Abra o projeto:**
+   - Dê um duplo clique no arquivo `index.html` para abrir diretamente no navegador.
+   - **Dica:** Se estiver usando o VS Code, instale a extensão **Live Server** e inicie-a para que o navegador atualize automaticamente ao salvar os arquivos.
+
+## 🤝 Como contribuir
+
+Contribuições são sempre bem-vindas! Siga os passos abaixo:
+
+1. Faça um *fork* do projeto.
+2. Crie uma nova branch com a sua feature: `git checkout -b minha-feature`
+3. Salve as suas alterações e crie uma mensagem de commit explicando o que você fez: `git commit -m "feat: adicionado nova funcionalidade X"`
+4. Envie as suas alterações: `git push origin minha-feature`
+5. Abra um *Pull Request* no repositório original.
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Para mais detalhes, veja o arquivo [LICENSE](LICENSE).
+
+---
+Desenvolvido com ☕ e dedicação por [Arthur](https://www.linkedin.com/in/arthur-andrey/)
