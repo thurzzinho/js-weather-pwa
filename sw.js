@@ -1,29 +1,13 @@
-const CACHE_NAME = 'clima-agora-v1';
-const urlsToCache = [
-  './',
-  './index.html',
-  './css/style.css',
-  './js/scripts.js',
-  './manifest.json'
-];
-
-self.addEventListener('install', event => {
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        return cache.addAll(urlsToCache);
-      })
-  );
+// sw.js - Service Worker Básico
+self.addEventListener("install", (e) => {
+  console.log("Service Worker instalado");
 });
 
-self.addEventListener('fetch', event => {
-  event.respondWith(
-    caches.match(event.request)
-      .then(response => {
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      })
-  );
+self.addEventListener("activate", (e) => {
+  console.log("Service Worker ativado");
+});
+
+self.addEventListener("fetch", (e) => {
+  // Apenas permite que as requisições de rede passem normalmente
+  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
 });
