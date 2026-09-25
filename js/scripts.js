@@ -191,3 +191,44 @@ if (locationBtn) {
     }
   });
 }
+
+// Registro do Service Worker para PWA
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("./sw.js")
+      .then((reg) => console.log("Service Worker registrado com sucesso!", reg))
+      .catch((err) => console.log("Falha ao registrar o Service Worker:", err));
+  });
+}
+
+// Lógica para o Botão de Instalação do PWA
+let deferredPrompt;
+const installBtn = document.querySelector("#install-btn");
+
+window.addEventListener("beforeinstallprompt", (e) => {
+  // Impede o mini-infobar automático do navegador
+  e.preventDefault();
+  // Armazena o evento para disparar quando o usuário clicar no botão
+  deferredPrompt = e;
+  // Mostra o botão de instalação (removendo a classe 'hide')
+  if (installBtn) {
+    installBtn.classList.remove("hide");
+  }
+});
+
+if (installBtn) {
+  installBtn.addEventListener("click", async () => {
+    if (!deferredPrompt) return;
+    // Mostra o prompt nativo de instalação
+    deferredPrompt.prompt();
+    // Aguarda a escolha do usuário
+    const { outcome } = await deferredPrompt.userChoice;
+    if (outcome === "accepted") {
+      console.log("Usuário aceitou a instalação do PWA");
+    }
+    deferredPrompt = null;
+    // Esconde o botão novamente
+    installBtn.classList.add("hide");
+  });
+}
